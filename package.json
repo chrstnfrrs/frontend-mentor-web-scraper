@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "name": "frontend-mentor-web-scraper",
+  "description": "A web scraper to get a information on frontend mentor projects",
+  "author": "Christian Farris",
+  "license": "MIT",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "scrape": "tsc && node build/index.js"
+  },
+  "dependencies": {
+    "playwright": "^1.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  }
+}
