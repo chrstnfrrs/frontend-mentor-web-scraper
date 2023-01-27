@@ -15,8 +15,9 @@ const data = [];
 for (const li of listItems) {
   const heading = await li.getByRole("heading");
   const link = await heading.getByRole("link");
-  const text = await link.allInnerTexts();
-  if (text.length) {
+  const name = (await link.allInnerTexts())[0];
+
+  if (name) {
     const skillsEls = await li.getByRole("listitem").all();
     const skills = [];
     for (const skill of skillsEls) {
@@ -38,7 +39,7 @@ for (const li of listItems) {
       }
     }
 
-    data.push({ name: text[0], skills, difficulty });
+    data.push({ name, skills, difficulty });
   }
 }
 
